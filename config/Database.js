@@ -1,7 +1,7 @@
 import { Sequelize } from "sequelize";
 
 // Nyambungin db ke BE
-const db = new Sequelize("asisten-tcc-api", "root", "", {
+const db = new Sequelize("tcc-2", "root", "", {
   host: "localhost",
   dialect: "mysql",
 });

@@ -21,4 +21,25 @@ async function createUser(req, res) {
   }
 }
 
-export { getUsers, createUser };
+async function updateUser(req, res) {
+  try {
+    const inputResult = req.body;
+    await User.update(inputResult, {
+      where: { id: req.params.id },
+    });
+    res.status(201).json({ msg: "User Updated" });
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+async function deleteUser(req, res) {
+  try {
+    await User.destroy({ where: { id: req.params.id } });
+    res.status(201).json({ msg: "User Deleted" });
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+export { getUsers, createUser, updateUser, deleteUser };
