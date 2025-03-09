@@ -10,6 +10,16 @@ async function getUsers(req, res) {
   }
 }
 
+// GET BY ID
+async function getUserById(req, res) {
+  try {
+    const response = await User.findOne({ where: { id: req.params.id } });
+    res.status(200).json(response);
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
 // CREATE
 async function createUser(req, res) {
   try {
@@ -42,4 +52,4 @@ async function deleteUser(req, res) {
   }
 }
 
-export { getUsers, createUser, updateUser, deleteUser };
+export { getUsers, getUserById, createUser, updateUser, deleteUser };
