@@ -3,5 +3,5 @@ WORKDIR /app
 ENV PORT=5000
 COPY . .
 RUN npm install
-EXPOSE 5000
+EXPOSE $PORT
 CMD ["node", "index.js"]
