@@ -8,7 +8,7 @@ Content-Type: application/json
 {
     "name": "tes",
     "email": "tes@tes.com",
-    "gender": "tes"
+    "gender": "Male"
 }
 
 ### 
@@ -17,9 +17,9 @@ PUT http://localhost:5000/edit-user/14
 Content-Type: application/json
 
 {
-    "name": "tes",
-    "email": "tes@tes.com",
-    "gender": "tes"
+    "name": "tessss",
+    "email": "tesss@tessss.com",
+    "gender": "Male"
 }
 
 ###
